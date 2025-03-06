@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perusahaan Modern</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #222;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li{
+            height: 50px;
+        }
+
+        nav a {
+            height: 100%;
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            letter-spacing: 1px;
+            margin: 0 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        nav li:first-child{
+            margin-right: auto;
+        }
+
+        .sidebar{
+            position:fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            background-color: rgba(128, 128, 128, 0.389);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar li{
+            width: 100%;
+        }
+
+        .sidebar a{
+            width: 100%;
+        }
+
+        .menu-button{
+            display: none;
+        }
+
+        .hero {
+            background-image: url('front-view-arrangement-economy-elements.jpg' );
+            max-width: 100%;
+            height: auto;   
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: rgb(255, 254, 231);
+            padding: 150px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            position: absolute;
+            top: 40%;
+            left: 9%;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            position: absolute;
+            top: 55%;
+            left: 6%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* About Us Section */
+        .about {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        @media(max-width: 900px) {
+            .hideOnMobile{
+                display: none;
+
+            }
+            .menu-button{
+                display: block;
+            }
+        }
+        @media(max-width: 400px){
+            .sidebar{
+                width: 100%;
+            }
+        }
+</style>
+<sript src="https://unpkg.com/@phosphor-icons/web"></sript>
+</head>
+<body>
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1> PT Mandiri Manajemen Investasi </h1>
+        <h1 class="hideOnMobile"> (MMI) </h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick= hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                 fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">PT.MMI</a></li>
+            <li class="hideOnMobile"><a href="#">Beranda</a></li>
+            <li class="hideOnMobile"><a href="#about">Tentang Kami</a></li>
+            <li class="hideOnMobile"><a href="#services">Layanan</a></li>
+            <li class="hideOnMobile"><a href="#contact">Kontak</a></li>
+            <li class="menu-button" onclick= showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" 
+                width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="ph-fill ph-list"></i>
+        </div>
+
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 style="font-size: 5vw;">Solusi Inovatif untuk Masa Depan</h2>
+        <p style="font-size: 2vw" class="hideOnMobile">Kami menyediakan layanan terbaik untuk membantu perusahaan Anda tumbuh dan berkembang.</p>
+        <br> <br> <br>
+        <a href="#services" class="btn-primary">Layanan Kami</a>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>Tentang Kami</h2>
+        <p>PT Bank Mandiri adalah Bank Usaha Milik Negara yang berfokus pada solusi inovatif untuk meningkatkan efisiensi bisnis Anda. Dengan tim profesional yang berpengalaman, kami siap membantu menyimpan aset anda dengan aman.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="service-card">
+            <h3 style="font-size: 3vw">Layanan 1</h3>
+            <p class="hideOnMobile">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis nihil unde reprehenderit amet deserunt quisquam deleniti quas repellendus ducimus perspiciatis.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3 style="font-size: 3vw">Layanan 2</h3>
+            <p class="hideOnMobile">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda hic voluptate mollitia quo. Iure, magnam?</p>
+        </div>
+        <div class="service-card">
+            <h3 style="font-size: 3vw">Layanan 3</h3>
+            <p class="hideOnMobile">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit incidunt dolor quae atque, porro doloremque suscipit fugiat ipsa.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bank Mandiri. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
